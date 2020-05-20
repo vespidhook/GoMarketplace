@@ -3,6 +3,8 @@ import FeatherIcon from 'react-native-vector-icons/Feather';
 
 import { View } from 'react-native';
 
+import EmptyCart from '../../components/EmptyCart';
+
 import {
   Container,
   ProductContainer,
@@ -39,31 +41,40 @@ const Cart: React.FC = () => {
   const { increment, decrement, products } = useCart();
 
   function handleIncrement(id: string): void {
-    // TODO
+    increment(id);
   }
 
   function handleDecrement(id: string): void {
-    // TODO
+    decrement(id);
   }
 
   const cartTotal = useMemo(() => {
-    // TODO RETURN THE SUM OF THE QUANTITY OF THE PRODUCTS IN THE CART
+    const cartAmount = products.reduce((accumulator, product) => {
+      const total = accumulator + product.price * product.quantity;
 
-    return formatValue(0);
+      return total;
+    }, 0);
+
+    return formatValue(cartAmount);
   }, [products]);
 
   const totalItensInCart = useMemo(() => {
-    // TODO RETURN THE SUM OF THE QUANTITY OF THE PRODUCTS IN THE CART
+    const cartItems = products.reduce((accumulator, product) => {
+      const total = accumulator + product.quantity;
 
-    return 0;
+      return total;
+    }, 0);
+
+    return cartItems;
   }, [products]);
 
   return (
     <Container>
       <ProductContainer>
-        <ProductList
+        <ProductList<Product>
           data={products}
           keyExtractor={item => item.id}
+          ListEmptyComponent={<EmptyCart />}
           ListFooterComponent={<View />}
           ListFooterComponentStyle={{
             height: 80,

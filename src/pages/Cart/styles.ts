@@ -7,24 +7,27 @@ export const Container = styled.SafeAreaView`
 `;
 
 export const ProductContainer = styled.View`
-  border-radius: 5px;
-  margin-top: 60px;
   flex: 1;
   flex-direction: row;
+  margin-top: 60px;
+  border-radius: 20px;
+  background-color: #e83f5b;
 `;
 
 export const ProductList = styled(FlatList)`
   flex: 1;
-  padding: 0 10px;
+  padding: 30px 10px;
 `;
 
 export const Product = styled.View`
-  background: #fff;
-  padding: 15px 10px;
-  border-radius: 5px;
-  margin: 5px;
   flex: 1;
   flex-direction: row;
+  margin: 5px;
+  background: #fff;
+  min-width: 350px;
+  min-height: 130px;
+  padding: 15px 10px;
+  border-radius: 20px;
 `;
 
 export const ProductImage = styled.Image`
@@ -52,14 +55,13 @@ export const TotalContainer = styled.View`
 
 export const ProductSinglePrice = styled.Text`
   font-size: 12px;
-  color: #a0a0b3;
+  color: #414756;
   margin-top: 8px;
 `;
 
 export const ProductPrice = styled.Text`
   font-weight: bold;
   margin-top: 5px;
-
   font-size: 16px;
   color: #e83f5b;
 `;
@@ -68,7 +70,6 @@ export const ProductQuantity = styled.Text`
   font-weight: bold;
   margin-top: 5px;
   margin-right: 10px;
-
   font-size: 16px;
   color: #e83f5b;
 `;
@@ -77,7 +78,6 @@ export const ActionContainer = styled.View`
   align-self: flex-end;
   align-items: center;
   justify-content: space-between;
-
   margin-left: auto;
 `;
 
@@ -89,22 +89,20 @@ export const ActionButton = styled.TouchableOpacity`
 `;
 
 export const TotalProductsContainer = styled.View`
-  position: absolute;
   bottom: 0px;
-
+  position: absolute;
   flex-direction: row;
-  background: #e83f5b;
-
-  padding: 20px 40px;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 36px 40px;
+  border-radius: 10px;
+  background: #e83f5b;
 `;
 
 export const TotalProductsText = styled.Text`
   font-size: 16px;
   color: #fff;
   margin-left: 15px;
-
   flex: 1;
   font-weight: bold;
 `;
