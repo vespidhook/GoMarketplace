@@ -1,5 +1,5 @@
 <h1 align="center" style="padding: 50px;">
-<img alt="gomarkeplace" src="https://raw.githubusercontent.com/leon-carvalho/gomarketplace-rn/master/docs/logo.png" width="400" heigth="auto"/>
+<img alt="gomarkeplace" src="https://raw.githubusercontent.com/leon-carvalho/gomarketplace-rn/master/docs/logo.png" width="300" heigth="auto"/>
 
 ## :bookmark_tabs: Sobre o Projeto
 
